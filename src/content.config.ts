@@ -114,7 +114,7 @@ const homepageCollection = defineCollection({
         })
       ),
     }),
-    participation: z.object({ title: z.string(), content: z.string(), note: z.string() }),
+    participation: z.object({ enable: z.boolean(), title: z.string(), content: z.string(), note: z.string() }),
     stickers: z.object({ title: z.string(), content: z.string(), image: z.string(), caption: z.string(), image_alt: z.string() }),
     organizers: z.object({
       title: z.string(),

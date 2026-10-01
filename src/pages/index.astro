@@ -126,6 +126,9 @@ const call_to_action = await getEntry("ctaSection", "call-to-action");
     </div>
   </section>
 
+  <!-- Community -->
+  <CallToAction call_to_action={call_to_action} />
+
   <!-- Overview -->
   <section
     class="section bg-theme-light dark:bg-darkmode-theme-light"
@@ -154,16 +157,19 @@ const call_to_action = await getEntry("ctaSection", "call-to-action");
     </div>
   </section>
 
-  <!-- Bring work -->
-  <section class="section-sm" id="participation" aria-labelledby="participation-title">
-    <div class="container">
-      <div class="mx-auto max-w-4xl rounded-xl border border-border bg-theme-light px-6 py-10 md:px-12 md:py-12 dark:border-darkmode-border dark:bg-darkmode-theme-light">
-        <h2 id="participation-title" class="mb-6">{participation.title}</h2>
-        <p class="mb-5 text-xl md:text-2xl leading-relaxed">{participation.content}</p>
-        <p class="text-lg md:text-xl leading-relaxed">{participation.note}</p>
+  <!-- Bring work: enable after acceptance in homepage content. -->
+  {participation.enable && (
+    <section class="section-sm" id="participation" aria-labelledby="participation-title">
+      <div class="container">
+        <div class="mx-auto max-w-4xl rounded-xl border border-border bg-theme-light px-6 py-10 md:px-12 md:py-12 dark:border-darkmode-border dark:bg-darkmode-theme-light">
+          <h2 id="participation-title" class="mb-6">{participation.title}</h2>
+          <p class="mb-5 text-xl md:text-2xl leading-relaxed">{participation.content}</p>
+          <p class="text-lg md:text-xl leading-relaxed">{participation.note}</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  )}
 
   <!-- Agenda -->
   <section class="section" id="agenda">
@@ -222,9 +228,6 @@ const call_to_action = await getEntry("ctaSection", "call-to-action");
 
     </div>
   </section>
-
-  <!-- Community -->
-  <CallToAction call_to_action={call_to_action} />
 
   <!-- Organizers -->
   <section

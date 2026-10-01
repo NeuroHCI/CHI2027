@@ -34,7 +34,7 @@ agenda:
       description: "Participants will rotate between groups of three, with about three minutes each to introduce their work, interests, or a current research question. Organizers will help form groups and facilitate the rotations."
     - time: 50–80 min
       title: NeuroHCI in Practice Exchange
-      description: "Participants will informally share and experience current NeuroHCI work, including lightweight prototypes, sensing or stimulation systems, interaction demos, methodological tools, videos, and discussions. These demonstrations will showcase relevant work and serve as informal conversation prompts."
+      description: "Participants will informally share and experience current NeuroHCI work, including lightweight prototypes, sensing or stimulation systems, interaction demos, methodological tools, videos, and discussions. These demonstrations will serve as informal conversation prompts for discussing methods, experiences, and shared challenges."
     - time: 80–90 min
       title: Group Summary
       description: "Participants will share one takeaway in the NeuroHCI Slack channel, optionally with an image: a method they encountered, something they learned, or a new connection. These posts will provide a starting point for continued discussion after the meet-up."
@@ -111,6 +111,7 @@ contact:
     label: "Send Email"
     link: "mailto:neurointeraction@gmail.com"
 participation:
+  enable: false
   title: "Bring something to share"
   content: "If you have work you would like to share, please bring it along. Lightweight prototypes, sensing or stimulation systems, interaction demos, methodological tools, short videos, and other ongoing work are all welcome."
   note: "Bringing work is optional. You can take part without a demo or prepared materials. Organizers will also bring examples for the exchange."

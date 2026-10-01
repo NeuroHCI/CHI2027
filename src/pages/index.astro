@@ -154,8 +154,16 @@ const call_to_action = await getEntry("ctaSection", "call-to-action");
     </div>
   </section>
 
-  <!-- CTA -->
-  <CallToAction call_to_action={call_to_action} />
+  <!-- Bring work -->
+  <section class="section-sm" id="participation" aria-labelledby="participation-title">
+    <div class="container">
+      <div class="mx-auto max-w-4xl rounded-xl border border-border bg-theme-light px-6 py-10 md:px-12 md:py-12 dark:border-darkmode-border dark:bg-darkmode-theme-light">
+        <h2 id="participation-title" class="mb-6">{participation.title}</h2>
+        <p class="mb-5 text-xl md:text-2xl leading-relaxed">{participation.content}</p>
+        <p class="text-lg md:text-xl leading-relaxed">{participation.note}</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Agenda -->
   <section class="section" id="agenda">
@@ -209,14 +217,14 @@ const call_to_action = await getEntry("ctaSection", "call-to-action");
       <figure>
         <ImageMod src={stickers.image} width={2400} height={960} alt={stickers.image_alt}
           format="webp" loading="lazy" class="w-full h-auto rounded-xl" />
-        <figcaption class="mt-3 text-center text-sm text-text-light">{stickers.caption} <a href={`${import.meta.env.BASE_URL}/images/methodology-stickers.png`} target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">View full-size concepts</a></figcaption>
+        <figcaption class="mt-3 text-center text-sm text-text-light">{stickers.caption} <a href={`${import.meta.env.BASE_URL}/images/methodology-stickers.png`} target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">View full-size sticker sheet</a></figcaption>
       </figure>
-      <div class="mx-auto mt-10 max-w-3xl rounded-xl bg-body p-6 md:p-8">
-        <h3 class="mb-3 text-xl">{participation.title}</h3>
-        <p class="leading-relaxed">{participation.content}</p>
-      </div>
+
     </div>
   </section>
+
+  <!-- Community -->
+  <CallToAction call_to_action={call_to_action} />
 
   <!-- Organizers -->
   <section

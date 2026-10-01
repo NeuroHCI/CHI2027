@@ -1,8 +1,8 @@
 ---
 enable: true
-title: Join the NeuroHCI Community
+title: NeuroHCI community
 image: /images/Neuron.svg
-description: Reconnect with previous participants, meet new colleagues, and share papers, demos, opportunities, and ideas before, during, and after CHI 2027. Use the form below to request access to the NeuroHCI Slack workspace.
+description: We use the NeuroHCI Slack workspace to share papers, discuss ongoing work, and keep in touch between meet-ups. Use the form below to request access.
 button:
   enable: true
   label: Request Slack access

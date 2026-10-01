@@ -17,7 +17,7 @@ Validation: yarn run check followed by yarn build. Preview the production build 
 - Site configuration: src/config/config.json and astro.config.mjs.
 - Image assets: public/images/.
 
-The header photographs are from CHI 2026. The sticker sheet presents initial concepts. Organizer details follow the CHI 2027 proposal. Paul Strohmeier and Michael T. Knierim portraits are sourced from their linked institutional profiles.
+The header photographs are from CHI 2026. The sticker sheet presents initial concepts. Organizer biographies retain the detail of the CHI 2026 website, with career updates from the CHI 2027 proposal and current researcher profiles. Paul Strohmeier and Michael T. Knierim portraits are sourced from their linked institutional profiles.
 
 ## Publishing
 

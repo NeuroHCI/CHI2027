@@ -47,19 +47,19 @@ organizers:
       link: https://www.ambermaimon.com
       twitter: https://twitter.com/AmberMaimon
       linkedin: https://www.linkedin.com/in/amber-maimon/
-      bio: Amber researches neuroplasticity, connections between the senses, and the body and mind. Her work explores technologies for augmenting and understanding mental and cognitive states. She co-founded a NeuroHCI research group with Iddo Wald.
+      bio: "Amber Maimon is a researcher and research strategist in neuroscience, neurotechnology, and human–computer interaction. Amber's work centers around neuroplasticity, connections between the senses, and the body and mind. Specifically, her work focuses on these research themes and human interaction with various technologies for augmenting, reprogramming, and reverse engineering mental and cognitive states, as explored in a NeuroHCI research group she co-founded with Iddo Wald. In addition to academic publication venues, Amber's recent research has also been featured in numerous popular media outlets such as Neuroscience News, SciTechDaily, and Popular Mechanics."
     - name: Iddo Yehoshua Wald
       role: Postdoctoral Researcher · University of Bremen
       image: /images/iddo-wald.jpg
       link: https://iddowald.com
       linkedin: https://www.linkedin.com/in/iddowald
-      bio: Iddo works at the Digital Media Lab at the University of Bremen. His research develops novel sensory experiences based on mechanisms of perception, with a focus on extending perception and enhancing interoception. He co-founded a NeuroHCI research group with Amber Maimon.
+      bio: "Iddo Wald, PhD, is a postdoctoral researcher at the Digital Media Lab, University of Bremen. He previously co-founded a health-tech startup, then transitioned to academia to build and lead the design and technology team at Reichman University's Media Innovation Lab (milab), and helped establish the university's MA in HCI. He then joined the university's Institute for Brain, Cognition, and Technology's management team, where he co-founded a NeuroHCI research group with Dr. Amber Maimon. His current research focuses on development of novel sensory experiences based on fundamental mechanisms of sensory perception, specifically extending perception and enhancing interoception. Iddo's work has been published at top HCI conferences including CHI, DIS and TEI (Best pictorial 2021), featured in popular media, and numerous public displays."
     - name: Yudai Tanaka
-      role: University of Chicago · Incoming Assistant Professor, UT Austin
+      role: "Incoming Assistant Professor · UT Austin (January 2027)"
       image: /images/yudai-tanaka.jpg
       link: https://yudai-tanaka.com
       linkedin: https://www.linkedin.com/in/yudai-tanaka-2492b0110/
-      bio: Yudai is a PhD candidate at the University of Chicago and an incoming Assistant Professor of Computer Science at the University of Texas at Austin. His research explores interfaces that provide sensory feedback through the brain and nervous system.
+      bio: "Yudai Tanaka will join the University of Texas at Austin as an Assistant Professor of Computer Science in January 2027, where he will establish the Symbiotic Interfaces Lab. He is currently completing his PhD at the University of Chicago, advised by Prof. Pedro Lopes. In his research, Yudai explores computer interfaces that output sensory feedback by intercepting the user’s brain or nervous system. These interfaces free up the user’s body from hardware in touch interactions, or even envision a new form of interactive experiences by presenting sensations directly to the brain. Yudai has published work at top HCI conferences including ACM CHI/UIST, with Best Paper Award (CHI 2023), Best Paper Honorable Mention (CHI 2024, UIST 2024), and Best Demo Award (CHI 2022) & Honorable Mention (UIST 2024). His work has been covered by IEEE Spectrum and New Scientist."
     - name: Yun Ho
       role: University of Chicago
       image: /images/yun-ho.png
@@ -69,12 +69,14 @@ organizers:
     - name: Paul Strohmeier
       role: Group Leader · Max Planck Institute for Informatics
       link: https://people.mpi-inf.mpg.de/~pastrohm/
-      bio: Paul leads the Sensorimotor Interaction group. His research connects human perception and computer sensing, including tactile rendering, sensorimotor augmentation, and on-body systems.
+      linkedin: "https://www.linkedin.com/in/paul-strohmeier-1b150452/"
+      bio: "Paul Strohmeier leads the Sensorimotor Interaction group at the Max Planck Institute for Informatics in Saarbrücken, Germany. The group brings together research on how people perceive the world and how computers sense it to develop new forms of human–computer interaction. His work includes tactile rendering, sensorimotor augmentation, and on-body systems, exploring how technology can engage with and extend our sensory and bodily capabilities."
       image: /images/paul-strohmeier.jpg
     - name: Michael T. Knierim
       role: Research Group Lead · Karlsruhe Institute of Technology
       link: https://im.win.kit.edu/team_1261.php
-      bio: Michael works on wearable neurotechnology, physiological sensing, and brain–computer interfaces, including headphone EEG for cognitive load detection in laboratory and field settings.
+      linkedin: "https://www.linkedin.com/in/dr-michael-knierim-13397881/"
+      bio: "Michael T. Knierim leads the Platforms & Digital Experiences research group at the Karlsruhe Institute of Technology and is an Honorary Associate Professor at the University of Nottingham. He studies how technology shapes productivity and well-being, including mental workload, flow, fatigue, virtual collaboration, and interaction with AI. His research combines laboratory and field studies with physiological sensing and wearable neurotechnology. He develops open-source systems for collecting neural and other biosignals during everyday activities, including headphone EEG for cognitive load detection. This work connects the development of practical sensing tools with understanding how interactive systems can support people in their daily work."
       image: /images/michael-knierim.jpg
     - name: Max L. Wilson
       role: University of Nottingham

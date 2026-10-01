@@ -1,0 +1,34 @@
+{
+  "main": [
+    {
+      "name": "Overview",
+      "url": "#overview"
+    },
+    {
+      "name": "Agenda",
+      "url": "#agenda"
+    },
+    {
+      "name": "Stickers",
+      "url": "#stickers"
+    },
+    {
+      "name": "Organizers",
+      "url": "#organizers"
+    },
+    {
+      "name": "Contact",
+      "url": "#contact"
+    }
+  ],
+  "footer": [
+    {
+      "name": "CHI 2026 meet-up",
+      "url": "https://neurohci.github.io/CHI2026/"
+    },
+    {
+      "name": "CHI 2027 conference",
+      "url": "https://chi2027.acm.org/"
+    }
+  ]
+}

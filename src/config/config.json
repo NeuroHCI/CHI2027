@@ -1,0 +1,51 @@
+{
+  "site": {
+    "title": "NeuroHCI in Practice · CHI 2027",
+    "base_url": "https://neurohci.github.io",
+    "base_path": "/CHI2027",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "",
+    "logo_darkmode": "",
+    "logo_width": "150",
+    "logo_height": "30",
+    "logo_text": "NeuroHCI"
+  },
+  "settings": {
+    "search": false,
+    "sticky_header": true,
+    "theme_switcher": false,
+    "default_theme": "light",
+    "pagination": 2,
+    "summary_length": 200,
+    "blog_folder": "blog"
+  },
+  "announcement": {
+    "enable": false,
+    "content": "",
+    "expire_days": 7
+  },
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "NeuroHCI · CHI 2027"
+  },
+  "navigation_button": {
+    "enable": false,
+    "label": "Get Started",
+    "link": "https://github.com/zeon-studio/astroplate"
+  },
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  },
+  "disqus": {
+    "enable": false,
+    "shortname": "themefisher-template",
+    "settings": {}
+  },
+  "metadata": {
+    "meta_author": "NeuroHCI organizers",
+    "meta_image": "/CHI2027/images/meetup-2026-collage.png",
+    "meta_description": "NeuroHCI in Practice: a proposed meet-up at CHI 2027 in Pittsburgh for sharing methods, current work, and connections across neuroscience and human–computer interaction."
+  }
+}

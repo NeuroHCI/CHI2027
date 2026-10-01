@@ -1,0 +1,323 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Social from "@/components/Social.astro";
+import Base from "@/layouts/Base.astro";
+import { getListPage } from "@/lib/contentParser.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import CallToAction from "@/partials/CallToAction.astro";
+
+const homepage = await getListPage("homepage", "-index");
+const { banner, overview, agenda, organizers, contact, participation, stickers } = homepage.data;
+const call_to_action = await getEntry("ctaSection", "call-to-action");
+---
+
+<Base>
+  <figure class="w-full">
+    <ImageMod src={banner.image} width={2048} height={832} alt={banner.image_alt}
+      format="webp" loading="eager" fetchpriority="high" class="w-full h-auto" />
+    <figcaption class="container mt-3 text-sm text-text-light">{banner.image_caption}</figcaption>
+  </figure>
+
+  <!-- Banner Content -->
+
+  <section class="section pt-14 pb-16">
+    <div class="container">
+      <div class="row justify-center text-center">
+        <div class="lg:col-10">
+          <p class="mb-4 inline-block rounded-full bg-theme-light px-4 py-2 text-sm font-medium">{banner.status}</p>
+          <h1
+            set:html={markdownify(banner.title)}
+            class="mb-4 text-h2 lg:text-h1 font-bold"
+          />
+          <p class="mb-6 text-2xl text-text font-medium">{banner.subtitle}</p>
+
+          <div
+            class="flex flex-wrap justify-center gap-6 mb-8 text-lg font-secondary"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-calendar"
+                ><rect x="3" y="4" width="18" height="18" rx="2" ry="2"
+                ></rect><line x1="16" y1="2" x2="16" y2="6"></line><line
+                  x1="8"
+                  y1="2"
+                  x2="8"
+                  y2="6"></line><line x1="3" y1="10" x2="21" y2="10"
+                ></line></svg
+              >
+              <span>{banner.date}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-clock"
+                ><circle cx="12" cy="12" r="10"></circle><polyline
+                  points="12 6 12 12 16 14"></polyline></svg
+              >
+              <span>{banner.time}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-map-pin"
+                ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                ></path><circle cx="12" cy="10" r="3"></circle></svg
+              >
+              <span>{banner.location}</span>
+            </div>
+          </div>
+
+          <p set:html={markdownify(banner.content)} class="mb-8 text-lg" />
+
+          <div class="flex flex-wrap justify-center gap-4 mb-10">
+            {
+              banner.button?.enable && (
+                <a
+                  class="btn btn-primary"
+                  href={banner.button.link}
+                  target={banner.button.link.startsWith("http") ? "_blank" : undefined}
+                  rel={banner.button.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                >
+                  {banner.button.label}
+                </a>
+              )
+            }
+            {
+              banner.button2?.enable && (
+                <a
+                  class="btn btn-primary"
+                  href={banner.button2.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {banner.button2.label}
+                </a>
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section
+    class="section bg-theme-light dark:bg-darkmode-theme-light"
+    id="overview"
+  >
+    <div class="container">
+      <div class="row items-center justify-between">
+        <div class="mb-10 md:col-5 md:mb-0">
+          <div>
+            <ImageMod
+              src={overview.image}
+              height={300}
+              width={300}
+              alt="Illustration of NeuroHCI"
+              loading="eager"
+              fetchpriority="high"
+              class="w-[40%] md:w-[70%] mx-auto"
+            />
+          </div>
+        </div>
+        <div class="md:col-7 lg:col-6">
+          <h2 class="mb-6">{overview.title}</h2>
+          <p class="text-lg leading-relaxed">{overview.content}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CallToAction call_to_action={call_to_action} />
+
+  <!-- Agenda -->
+  <section class="section" id="agenda">
+    <div class="container">
+      <div class="mb-12 text-center">
+        <h2>{agenda.title}</h2>
+        <p class="mt-4 text-lg">{agenda.description}</p>
+      </div>
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          <div
+            class="relative border-l-2 border-primary/30 pl-8 ml-4 space-y-12"
+          >
+            {
+              agenda.items.map((item: any) => (
+                <div class="relative">
+                  <div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-primary dark:border-darkmode-body" />
+                  <div class="rounded-lg border border-border bg-theme-light p-6 shadow-sm dark:border-darkmode-border dark:bg-darkmode-theme-light">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                      <h3 class="text-xl font-bold">{item.title}</h3>
+                      <span class="badge badge-secondary mt-2 sm:mt-0">
+                        {item.time}
+                      </span>
+                    </div>
+                    {item.speaker && (
+                      <p class="text-primary italic font-medium">
+                        {item.speaker}
+                      </p>
+                    )}
+                    {item.description && (
+                      <p class="mt-2 text-text opacity-90">
+                        {item.description}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm bg-theme-light" id="stickers">
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center mb-8">
+        <h2 class="mb-4">{stickers.title}</h2>
+        <p class="text-lg leading-relaxed">{stickers.content}</p>
+      </div>
+      <figure>
+        <ImageMod src={stickers.image} width={2400} height={960} alt={stickers.image_alt}
+          format="webp" loading="lazy" class="w-full h-auto rounded-xl" />
+        <figcaption class="mt-3 text-center text-sm text-text-light">{stickers.caption} <a href={`${import.meta.env.BASE_URL}/images/methodology-stickers.png`} target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">View full-size concepts</a></figcaption>
+      </figure>
+      <div class="mx-auto mt-10 max-w-3xl rounded-xl bg-body p-6 md:p-8">
+        <h3 class="mb-3 text-xl">{participation.title}</h3>
+        <p class="leading-relaxed">{participation.content}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizers -->
+  <section
+    class="section bg-theme-light dark:bg-darkmode-theme-light"
+    id="organizers"
+  >
+    <div class="container">
+      <div class="mb-12 text-center">
+        <h2>{organizers.title}</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {
+          organizers.members.map((member: any) => {
+            const socialLinks = [];
+            if (member.link)
+              socialLinks.push({
+                name: "Website",
+                icon: "FaGlobe",
+                link: member.link,
+              });
+            if (member.linkedin)
+              socialLinks.push({
+                name: "LinkedIn",
+                icon: "FaLinkedin",
+                link: member.linkedin,
+              });
+            if (member.twitter)
+              socialLinks.push({
+                name: "Twitter",
+                icon: "FaTwitter",
+                link: member.twitter,
+              });
+
+            return (
+              <div>
+                <div class="rounded-xl bg-body p-6 text-center shadow-lg dark:bg-darkmode-body">
+                  <div class="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-md dark:border-darkmode-border">
+                    {member.image ? (
+                      <ImageMod src={member.image} height={100} width={100} alt={member.name}
+                        format="webp" class="h-full w-full object-cover" />
+                    ) : (
+                      <span aria-hidden="true" class="flex h-full w-full items-center justify-center bg-theme-light text-2xl font-bold">
+                        {member.name.split(" ").filter((part: string) => !part.includes(".")).map((part: string) => part[0]).slice(0, 2).join("")}
+                      </span>
+                    )}
+                  </div>
+                  <h4 class="mb-1">{member.name}</h4>
+                  <p class="text-primary font-medium mb-3">{member.role}</p>
+
+                  <Social
+                    source={socialLinks}
+                    className="social-icons flex justify-center gap-4 mb-4 text-primary"
+                  />
+
+                  {member.bio && (
+                    <p class="text-sm text-text-light text-left mt-4 leading-relaxed opacity-90">
+                      {member.bio}
+                    </p>
+                  )}
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="mb-6">{contact.title}</h2>
+        <p class="mb-8 text-lg">{contact.description}</p>
+        <div
+          class="rounded-lg bg-theme-light p-8 dark:bg-darkmode-theme-light shadow-lg"
+        >
+          <a
+            href={contact.button.link}
+            class="btn btn-primary btn-lg inline-flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-mail"
+              ><path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path><polyline points="22,6 12,13 2,6"></polyline></svg
+            >
+            {contact.button.label}
+          </a>
+          <p class="mt-4 font-mono text-text">{contact.email}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
